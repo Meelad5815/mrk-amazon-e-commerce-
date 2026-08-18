@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MRK Store — modern online shopping experience.">
+  <title>MRK Store | Online Shopping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-strip">Free delivery on orders over Rs. 5,000 · Secure checkout · 7-day easy returns</div>
+
+  <header class="header">
+    <a class="logo" href="#" aria-label="MRK Store home"><span>MRK</span><small>STORE</small></a>
+    <button class="location" type="button"><span>📍</span><div><small>Deliver to</small><strong>Pakistan</strong></div></button>
+    <form class="search" id="searchForm">
+      <select id="categorySelect" aria-label="Category"><option value="all">All</option><option value="electronics">Electronics</option><option value="fashion">Fashion</option><option value="home">Home</option><option value="beauty">Beauty</option></select>
+      <input id="searchInput" type="search" placeholder="Search products, brands and more..." autocomplete="off">
+      <button type="submit" aria-label="Search">⌕</button>
+    </form>
+    <button class="account" type="button" id="accountBtn"><small>Hello, Sign in</small><strong>Account & Lists ▾</strong></button>
+    <a class="orders" href="#orders"><small>Returns</small><strong>& Orders</strong></a>
+    <button class="cart" id="cartBtn" type="button" aria-label="Shopping cart"><span>🛒</span><b id="cartCount">0</b><strong>Cart</strong></button>
+  </header>
+
+  <nav class="nav">
+    <button id="menuBtn" type="button">☰ <strong>All</strong></button>
+    <a href="#deals">Today's Deals</a><a href="#products">Best Sellers</a><a href="#products">New Arrivals</a><a href="#categories">Categories</a><a href="#services">Customer Service</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><span class="eyebrow">MRK STORE · 2026</span><h1>Everything you need.<br><em>Delivered simply.</em></h1><p>Discover electronics, fashion, home essentials and more — curated for value, quality and convenience.</p><div class="hero-actions"><a class="primary" href="#products">Shop now</a><a class="secondary" href="#deals">Explore deals →</a></div></div>
+      <div class="hero-art"><div class="orb orb-a"></div><div class="orb orb-b"></div><div class="product-card"><span>⚡ DEAL OF THE DAY</span><div class="phone">📱</div><strong>Smart Tech</strong><small>Up to 40% off</small></div></div>
+    </section>
+
+    <section class="trust-row" id="services"><div>🚚 <strong>Fast Delivery</strong><span>Reliable nationwide shipping</span></div><div>🔒 <strong>Secure Payments</strong><span>Your checkout is protected</span></div><div>↩️ <strong>Easy Returns</strong><span>7-day return policy</span></div><div>💬 <strong>Support</strong><span>We're here to help</span></div></section>
+
+    <section class="section" id="categories"><div class="section-head"><div><span class="eyebrow">SHOP BY CATEGORY</span><h2>Find your next favorite</h2></div><a href="#products">View all →</a></div><div class="category-grid">
+      <button class="category" data-category="electronics"><span>💻</span><strong>Electronics</strong><small>Phones · Laptops · Accessories</small></button>
+      <button class="category" data-category="fashion"><span>👟</span><strong>Fashion</strong><small>Clothing · Shoes · Bags</small></button>
+      <button class="category" data-category="home"><span>🏠</span><strong>Home & Living</strong><small>Kitchen · Decor · Essentials</small></button>
+      <button class="category" data-category="beauty"><span>✨</span><strong>Beauty</strong><small>Care · Grooming · Wellness</small></button>
+    </div></section>
+
+    <section class="deal-banner" id="deals"><div><span class="eyebrow">LIMITED TIME</span><h2>Big deals. Small prices.</h2><p>Save more on selected products this week.</p></div><div class="deal-stat"><strong>40%</strong><span>OFF</span></div><a class="primary" href="#products">Shop deals</a></section>
+
+    <section class="section" id="products"><div class="section-head"><div><span class="eyebrow">TRENDING NOW</span><h2>Popular products</h2></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="electronics">Electronics</button><button class="filter" data-filter="fashion">Fashion</button><button class="filter" data-filter="home">Home</button></div></div><div class="product-grid" id="productGrid"></div><div class="empty" id="emptyState" hidden>No products found. Try another search or category.</div></section>
+
+    <section class="newsletter"><div><span class="eyebrow">MRK INSIDER</span><h2>Get the best deals first.</h2><p>Join our newsletter for new arrivals, offers and shopping tips.</p></div><form id="newsletterForm"><input type="email" placeholder="Your email address" required><button class="primary" type="submit">Subscribe</button></form></section>
+  </main>
+
+  <footer id="orders"><div class="footer-main"><div><a class="logo footer-logo" href="#"><span>MRK</span><small>STORE</small></a><p>Smart shopping for everyday life.</p></div><div><h4>Shop</h4><a href="#products">All Products</a><a href="#deals">Deals</a><a href="#categories">Categories</a></div><div><h4>Help</h4><a href="#services">Customer Service</a><a href="#orders">Orders & Returns</a><a href="#">Shipping</a></div><div><h4>Contact</h4><a href="mailto:support@mrkstore.example">support@mrkstore.example</a><a href="#">Pakistan</a></div></div><div class="footer-bottom">© 2026 MRK Store. All rights reserved. <span>Built for a fast, simple shopping experience.</span></div></footer>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true"><div class="drawer-head"><h2>Your Cart</h2><button id="closeCart" type="button">×</button></div><div id="cartItems" class="cart-items"></div><div class="cart-footer"><div><span>Subtotal</span><strong id="cartTotal">Rs. 0</strong></div><button class="primary checkout" id="checkoutBtn" type="button">Proceed to checkout</button></div></aside><div class="overlay" id="overlay"></div>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
