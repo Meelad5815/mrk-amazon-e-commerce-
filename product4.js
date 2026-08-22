@@ -46,7 +46,9 @@
       grid.appendChild(card);
     }
 
+    if (card.dataset.mrkSynced === "1") return;
     card.dataset.id = "4";
+    card.dataset.mrkSynced = "1";
     card.innerHTML = `
       <span class="badge">NEW</span>
       <div class="product-img"><img src="${product4.image}" alt="${title}" loading="lazy"></div>
@@ -60,7 +62,7 @@
     const button = card.querySelector(".add");
     button.addEventListener("click", () => {
       window.open(product4.affiliateUrl, "_blank", "noopener,noreferrer");
-    }, { once: true });
+    });
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", syncProduct, { once: true });
